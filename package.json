@@ -1,5 +1,13 @@
 {
-  "devDependencies": {
-    "@wordpress/env": "^6.0.0"
-  }
+	"scripts": {
+		"build": "npx postcss --use postcss-import-ext-glob postcss-import postcss-nested -o ./style.css ./assets/css/main.css",
+		"watch": "npm run build -- --watch"
+	},
+	"devDependencies": {
+		"@wordpress/env": "^6.0.0",
+		"postcss-cli": "^10.1.0",
+		"postcss-import": "^15.1.0",
+		"postcss-import-ext-glob": "^2.1.1",
+		"postcss-nested": "^6.0.1"
+	}
 }

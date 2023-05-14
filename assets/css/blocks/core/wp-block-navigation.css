@@ -1,0 +1,51 @@
+/* Navigation
+--------------------------------------------- */
+
+.wp-block-navigation__container {
+	gap: var(--wp--preset--spacing--70);
+}
+
+.wp-block-navigation__responsive-container.is-menu-open {
+	padding-bottom: var(--wp--custom--spacing--gap);
+	padding-top: var(--wp--custom--spacing--gap);
+}
+
+.wp-block-navigation__responsive-container-close,
+.wp-block-navigation__responsive-container-open {
+	border: 1px solid currentColor;
+	padding: 2px;
+}
+
+/* Navigation Submenu
+  --------------------------------------------- */
+
+.wp-block-navigation:not(.has-background)
+	.wp-block-navigation__submenu-container {
+	border-color: var(--wp--preset--color--contrast);
+	min-width: 180px !important;
+	padding: 10px;
+}
+
+.wp-block-navigation
+	:where(.wp-block-navigation__submenu-container)
+	.wp-block-navigation-item__content {
+	padding: 2px 10px;
+}
+
+.wp-block-navigation__responsive-container.is-menu-open
+	.wp-block-navigation__submenu-container {
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+	padding-top: 5px !important;
+}
+
+@media only screen and (min-width: 800px) {
+	/* Navigation Link
+	  --------------------------------------------- */
+
+	.wp-block-navigation-item.is-style-outline a {
+		border: 1px solid currentColor;
+		border-radius: 5px;
+		padding: 5px 15px;
+	}
+}
