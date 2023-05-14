@@ -233,7 +233,7 @@
         {
           "fluid": {
             "min": "30px",
-            "max": "36px"
+            "max": "96px"
           },
           "name": "Display",
           "size": "96px",
