@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Default Query
- * Slug: powder/query
+ * Slug: podofcast/query
  * Description: Query of posts in stack view.
  * Categories: hidden
  * Inserter: false

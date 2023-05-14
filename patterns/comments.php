@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Default Comments
- * Slug: powder/comments
+ * Slug: podofcast/comments
  * Description: Comments section and form.
  * Categories: hidden
  * Inserter: false

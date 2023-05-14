@@ -1,8 +1,8 @@
 <?php
 /**
- * This file adds functions to the Powder WordPress theme.
+ * This file adds functions to the WordPress theme.
  *
- * @package Powder
+ * @package podofcast
  * @author  Brian Gardner
  * @license GNU General Public License v2 or later
  * @link    https://briangardner.com/
@@ -21,7 +21,7 @@ if ( ! function_exists( 'powder_setup' ) ) {
 	function powder_setup() {
 
 		// Make theme available for translation.
-		load_theme_textdomain( 'powder', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'podofcast', get_template_directory() . '/languages' );
 
 		// Enqueue editor styles.
 		add_editor_style( get_template_directory_uri() . '/style.css' );
@@ -44,10 +44,10 @@ add_action( 'after_setup_theme', 'powder_setup' );
 function powder_enqueue_style_sheet() {
 
 	wp_enqueue_style(
-		'powder',
+		'podofcast',
 		get_template_directory_uri() . '/style.css',
 		array(),
-		wp_get_theme( 'powder' )->get( 'Version' )
+		wp_get_theme( 'podofcast' )->get( 'Version' )
 	);
 
 }
@@ -62,16 +62,16 @@ function powder_register_block_styles() {
 
 	$block_styles = array(
 		'core/group' => array(
-			'shadow' => __( 'Shadow', 'powder' ),
+			'shadow' => __( 'Shadow', 'podofcast' ),
 		),
 		'core/image' => array(
-			'shadow' => __( 'Shadow', 'powder' ),
+			'shadow' => __( 'Shadow', 'podofcast' ),
 		),
 		'core/navigation-link' => array(
-			'outline' => __( 'Outline', 'powder' ),
+			'outline' => __( 'Outline', 'podofcast' ),
 		),
 		'core/social-links' => array(
-			'outline' => __( 'Outline', 'powder' ),
+			'outline' => __( 'Outline', 'podofcast' ),
 		),
 	);
 
