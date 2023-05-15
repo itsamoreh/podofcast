@@ -10,8 +10,8 @@
 <!-- wp:group {"className":"podofcast-pattern-hero","align":"full","style":{"spacing":{"padding":{"top":"64px","right":"12px","bottom":"60px","left":"12px"}}},"backgroundColor":"champagne","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 <div class="wp-block-group alignfull podofcast-pattern-hero has-champagne-background-color has-background" style="padding-top:64px;padding-right:12px;padding-bottom:60px;padding-left:12px">
 
-	<!-- wp:heading {"textAlign":"center","level":1,"textColor":"black","fontSize":"display"} -->
-	<h1 class="wp-block-heading has-text-align-center has-black-color has-text-color has-display-font-size"><strong>Your Daily <span class="last-word">Podcast</span></strong></h1>
+	<!-- wp:heading {"textAlign":"center","level":1,"lock":{"move":true,"remove":true},"textColor":"black","fontSize":"display"} -->
+	<h1 class="wp-block-heading has-text-align-center has-black-color has-text-color has-display-font-size"><strong>Your Daily<br> <span class="last-word">Podcast</span></strong></h1>
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|x-small"}}},"textColor":"davys-grey","fontSize":"Body"} -->
