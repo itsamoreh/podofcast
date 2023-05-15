@@ -1,0 +1,45 @@
+.podofcast-pattern-hero {
+	background-color: var(--wp--preset--color--primary);
+	position: relative;
+
+	&::before,
+	&::after {
+		content: "";
+		background-repeat: no-repeat;
+		background-size: contain;
+		height: 100%;
+		position: absolute;
+		top: 0;
+	}
+
+	&::before {
+		background-image: url("assets/images/hero-shape-swirl.png");
+		background-position: left;
+		left: 0;
+		width: clamp(25px, 20vw, 630px);
+	}
+
+	&::after {
+		background-image: url("assets/images/hero-shape-stars.png");
+		background-position: center;
+		right: 0;
+		width: clamp(25px, 10vw, 155px);
+		margin-right: clamp(10px, 5vw, 60px);
+	}
+
+	/* The main heading. */
+	.wp-block-heading {
+		font-size: var(--wp--preset--font-size--display);
+		padding: 0;
+		max-width: 550px;
+
+		.last-word {
+			color: var(--wp--preset--color--vermillion);
+		}
+	}
+
+	/* The paragraph content. */
+	p {
+		max-width: 372px;
+	}
+}
