@@ -2,13 +2,13 @@
 /**
  * This file adds functions to the WordPress theme.
  *
- * @package podofcast
- * @author  Brian Gardner
+ * @package Podofcast
+ * @author  Amor Kumar
  * @license GNU General Public License v2 or later
- * @link    https://briangardner.com/
+ * @link    https://amorkumar.com/
  */
 
-if ( ! function_exists( 'powder_setup' ) ) {
+if ( ! function_exists( 'podofcast_setup' ) ) {
 
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -18,7 +18,7 @@ if ( ! function_exists( 'powder_setup' ) ) {
 	 *
 	 * @since 0.5.0
 	 */
-	function powder_setup() {
+	function podofcast_setup() {
 
 		// Make theme available for translation.
 		load_theme_textdomain( 'podofcast', get_template_directory() . '/languages' );
@@ -34,14 +34,14 @@ if ( ! function_exists( 'powder_setup' ) ) {
 
 	}
 }
-add_action( 'after_setup_theme', 'powder_setup' );
+add_action( 'after_setup_theme', 'podofcast_setup' );
 
 /**
  * Enqueue theme style sheet.
  *
  * @since 0.5.0
  */
-function powder_enqueue_style_sheet() {
+function podofcast_enqueue_style_sheet() {
 
 	wp_enqueue_style(
 		'podofcast',
@@ -51,14 +51,14 @@ function powder_enqueue_style_sheet() {
 	);
 
 }
-add_action( 'wp_enqueue_scripts', 'powder_enqueue_style_sheet' );
+add_action( 'wp_enqueue_scripts', 'podofcast_enqueue_style_sheet' );
 
 /**
  * Register block styles.
  *
  * @since 0.5.0
  */
-function powder_register_block_styles() {
+function podofcast_register_block_styles() {
 
 	$block_styles = array(
 		'core/group' => array(
@@ -88,4 +88,4 @@ function powder_register_block_styles() {
 	}
 
 }
-add_action( 'init', 'powder_register_block_styles' );
+add_action( 'init', 'podofcast_register_block_styles' );
