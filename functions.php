@@ -2,7 +2,7 @@
 /**
  * This file adds functions to the WordPress theme.
  *
- * @package Podofcast
+ * @package podofcast
  * @author  Amor Kumar
  * @license GNU General Public License v2 or later
  * @link    https://amorkumar.com/
@@ -16,7 +16,7 @@ if ( ! function_exists( 'podofcast_setup' ) ) {
 	 * Note that this function is hooked into the after_setup_theme hook, which
 	 * runs before the init hook.
 	 *
-	 * @since 0.5.0
+	 * @since 0.1.0
 	 */
 	function podofcast_setup() {
 
@@ -39,7 +39,7 @@ add_action( 'after_setup_theme', 'podofcast_setup' );
 /**
  * Enqueue theme style sheet.
  *
- * @since 0.5.0
+ * @since 0.1.0
  */
 function podofcast_enqueue_style_sheet() {
 
@@ -56,7 +56,7 @@ add_action( 'wp_enqueue_scripts', 'podofcast_enqueue_style_sheet' );
 /**
  * Register block styles.
  *
- * @since 0.5.0
+ * @since 0.1.0
  */
 function podofcast_register_block_styles() {
 
@@ -89,3 +89,10 @@ function podofcast_register_block_styles() {
 
 }
 add_action( 'init', 'podofcast_register_block_styles' );
+
+/**
+ * Register custom Gutenberg blocks. TODO
+ *
+ * Registers each block in the blocks-built folder.
+ *
+ */
