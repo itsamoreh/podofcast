@@ -24,7 +24,7 @@ if ( ! function_exists( 'podofcast_setup' ) ) {
 		load_theme_textdomain( 'podofcast', get_template_directory() . '/languages' );
 
 		// Enqueue editor styles.
-		add_editor_style( get_template_directory_uri() . '/style.css' );
+		add_editor_style( '/style.css' );
 
 		// Disable loading core block inline styles.
 		add_filter( 'should_load_separate_core_block_assets', '__return_false' );
