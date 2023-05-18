@@ -108,8 +108,14 @@ function podofcast_register_block_pattern_categories() {
 add_action( 'init', 'podofcast_register_block_pattern_categories' );
 
 /**
- * Register custom Gutenberg blocks. TODO
+ * Register custom Gutenberg blocks.
  *
  * Registers each block in the blocks-built folder.
  *
  */
+function podofcast_register_custom_blocks() {
+	foreach ( glob( get_template_directory() . '/blocks-built/*/block.json') as $file ) {
+		register_block_type( $file );
+	}
+}
+add_action( 'init', 'podofcast_register_custom_blocks' );
