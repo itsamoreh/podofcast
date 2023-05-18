@@ -6,10 +6,19 @@ This is an experiment to see if I can build a full site editing theme from a fig
 
 ## Local Environment
 
-This theme includes a `.wp-env.json`. To spin up a WordPress environment with `wp-env`:
+This theme includes a `.wp-env.json`. To spin up a WordPress environment with `wp-env` first make sure docker desktop is installed. Then run the following command to start the environment:
 
-1. Follow the [`wp-env` setup instructions](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/#installation)
-1. Start the environment `wp-env start`
+```bash
+npm run start
+```
+
+You can stop the environment with the stop command:
+
+```bash
+npm run stop
+```
+
+See the [wp-env documentation](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/#installation) for more details.
 
 ## Building and Watching CSS
 
