@@ -1,0 +1,40 @@
+.podofcast-pattern-benefits {
+	padding-top: 140px;
+	padding-bottom: 140px;
+
+	> .wp-block-heading {
+		position: relative;
+		max-width: var(--wp--style--global--content-size);
+
+		&::before {
+			content: "";
+			position: absolute;
+			right: -128px;
+			top: -170px;
+			width: clamp(100px, 20vw, 292px);
+			height: clamp(100px, 20vw, 292px);
+			display: block;
+			background: url("assets/images/benefits-title-scribble.png")
+				no-repeat;
+			background-size: contain;
+		}
+	}
+
+	> p {
+		margin-bottom: 70px;
+	}
+
+	> .wp-block-group {
+		margin-bottom: 60px;
+		max-width: var(--wp--style--global--content-size);
+		padding: 0;
+
+		> .wp-block-group {
+			max-width: 375px;
+		}
+	}
+
+	> .wp-block-buttons {
+		margin-top: 10px;
+	}
+}
