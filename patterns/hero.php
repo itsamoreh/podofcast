@@ -3,7 +3,7 @@
  * Title: Hero
  * Slug: podofcast/hero
  * Description: Hero with title, body and button.
- * Categories: hero
+ * Categories: heros
  * Block Types: core/template-part/hero
  */
 ?>

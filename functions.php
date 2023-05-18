@@ -91,6 +91,23 @@ function podofcast_register_block_styles() {
 add_action( 'init', 'podofcast_register_block_styles' );
 
 /**
+ * Register block pattern categories.
+ *
+ * @since 0.1.0
+ */
+function podofcast_register_block_pattern_categories() {
+	register_block_pattern_category(
+		'heros',
+		array( 'label' => __( 'Heros', 'podofcast' ) )
+	);
+	register_block_pattern_category(
+		'other',
+		array( 'label' => __( 'Other', 'podofcast' ) )
+	);
+}
+add_action( 'init', 'podofcast_register_block_pattern_categories' );
+
+/**
  * Register custom Gutenberg blocks. TODO
  *
  * Registers each block in the blocks-built folder.
