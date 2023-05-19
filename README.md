@@ -6,7 +6,8 @@ This is an experiment to see if I can build a full site editing theme from a fig
 
 ## Local Environment
 
-This theme includes a `.wp-env.json`. To spin up a WordPress environment with `wp-env` first make sure docker desktop is installed. Then run the following command to start the environment:
+This theme includes a `.wp-env.json`. To spin up a WordPress environment with `wp-env` first make sure docker desktop is installed.
+Then run the following command to start the environment:
 
 ```bash
 npm run start
@@ -28,7 +29,7 @@ To build the CSS using PostCSS, run the following command in your terminal:
 npm run build:css
 ```
 
-This will take the assets/main.css file, run them through PostCSS, and output the result to style.css.
+This will take the assets/main.css file, run it and all imports through PostCSS, and output the result to style.css.
 To watch for changes to your CSS and automatically rebuild, run the following command in your terminal:
 
 ```bash
