@@ -114,8 +114,8 @@ add_action( 'init', 'podofcast_register_block_pattern_categories' );
  *
  */
 function podofcast_register_custom_blocks() {
-	foreach ( glob( get_template_directory() . '/blocks-built/*/block.json') as $file ) {
-		register_block_type( $file );
+	foreach ( glob( get_template_directory() . '/blocks-built/*/block.json') as $block ) {
+		register_block_type( $block );
 	}
 }
 add_action( 'init', 'podofcast_register_custom_blocks' );
