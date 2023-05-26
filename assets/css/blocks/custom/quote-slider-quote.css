@@ -1,0 +1,36 @@
+.wp-block-podofcast-quote-slider-quote {
+	padding: 40px;
+	border-radius: 8px;
+	background-color: var(--wp--preset--color--white);
+
+	.quote {
+		position: relative;
+		font-size: var(--wp--preset--font-size--h-3);
+		margin-top: 92px;
+
+		&::before {
+			position: absolute;
+			top: -40px;
+			content: "“";
+			font-size: var(--wp--preset--font-size--display);
+			color: var(--wp--preset--color--vermillion);
+		}
+	}
+
+	.wp-block-image {
+		display: inline;
+
+		img {
+			width: 48px;
+			height: 48px;
+			border-radius: 99px;
+		}
+	}
+
+	.citation {
+		display: inline;
+		margin-left: 10px;
+		font-size: var(--wp--preset--font-size--caption);
+		line-height: 48px;
+	}
+}

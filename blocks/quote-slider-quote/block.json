@@ -1,0 +1,12 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "podofcast/quote-slider-quote",
+	"title": "Quote Slider Quote",
+	"textdomain": "podofcast",
+	"icon": "smiley",
+	"category": "layout",
+	"example": {},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css"
+}
