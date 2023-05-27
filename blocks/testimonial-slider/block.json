@@ -7,6 +7,10 @@
 	"category": "text",
 	"icon": "smiley",
 	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
 		"heading": {
 			"type": "string"
 		},
@@ -21,8 +25,10 @@
 		}
 	},
 	"supports": {
+		"align": true,
 		"html": false
 	},
 	"textdomain": "podofcast",
-	"editorScript": "file:./index.js"
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./editor.css"
 }

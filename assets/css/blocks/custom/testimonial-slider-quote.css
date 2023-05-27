@@ -13,6 +13,7 @@
 			top: -40px;
 			content: "“";
 			font-size: var(--wp--preset--font-size--display);
+			font-weight: var(--wp--custom--font-weight--bold);
 			color: var(--wp--preset--color--vermillion);
 		}
 	}

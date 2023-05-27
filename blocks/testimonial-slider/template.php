@@ -8,24 +8,22 @@
  *
  * @package podofcast
  */
+$alignment = $attributes['align'] ?? '';
+$heading = $attributes['heading'] ?? '';
+$subheading = $attributes['subheading'] ?? '';
+$testimonial_slides = $content;
 
 ?>
-<blockquote <?php echo wp_kses_data( get_block_wrapper_attributes() ); ?>>
+<div <?php echo wp_kses_data( get_block_wrapper_attributes( array( 'class' => $alignment ? 'align' . $alignment : '' ) ) ); ?>>
 	<h2 class="heading">
-		<?php
-		if ( isset( $attributes['heading'] ) ) {
-			echo wp_kses_post( $attributes['heading'] );
-		}
-		?>
+		<?php echo $heading ?>
 	</h2>
 	<p class="subheading">
-		<?php
-		if ( isset( $attributes['subheading'] ) ) {
-			echo wp_kses_post( $attributes['subheading'] );
-		}
-		?>
+		<?php echo $subheading ?>
 	</p>
 	<div class="testimonial-slider">
-		<div class="testimonial-slider-track"></div>
+		<div class="testimonial-slider-track">
+			<?php echo do_blocks($testimonial_slides) ?>
+		</div>
 	</div>
-</blockquote>
+</div>

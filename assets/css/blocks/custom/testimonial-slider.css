@@ -6,23 +6,50 @@
 	align-items: center;
 	justify-content: center;
 	background-color: var(--wp--preset--color--alice-blue);
+	overflow: hidden;
 
 	.heading {
+		position: relative;
 		margin-top: 0;
 		margin-bottom: 20px;
 		font-size: var(--wp--preset--font-size--h-1);
 		font-weight: 700;
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: -70px;
+			top: -60px;
+			width: clamp(10px, 5vw, 80px);
+			height: clamp(10px, 5vw, 80px);
+			display: block;
+			background: url("assets/images/testimonial-slider-heading-flourish.png")
+				no-repeat;
+			background-size: contain;
+		}
 	}
 
 	.subheading {
+		margin-top: 0;
+		margin-bottom: 100px;
 		font-size: var(--wp--preset--font-size--h-3);
 		color: var(--wp--preset--color--davys-grey);
 	}
 
 	.testimonial-slider {
+		width: var(--wp--style--global--content-size);
+
 		&-track {
+			position: relative;
+			width: 100%;
 			display: flex;
 			gap: 20px;
+		}
+
+		.wp-block-podofcast-testimonial-slider-quote {
+			margin: 0;
+			width: 570px;
+			flex-shrink: 0;
 		}
 	}
 }
