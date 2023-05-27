@@ -20,7 +20,7 @@
 	</p>
 	<div class="footer">
 		<?php
-		if ( isset( $attributes['image'] ) ) {
+		if ( isset( $attributes['image']['id'] ) ) {
 			echo wp_get_attachment_image( $attributes['image']['id'], 'thumbnail', false, ['class' => 'author-image'] );
 		}
 		?>
