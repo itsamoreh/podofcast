@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "podofcast/testimonial-slider",
+	"version": "0.1.0",
+	"title": "Testimonial Slider",
+	"category": "text",
+	"icon": "smiley",
+	"attributes": {
+		"heading": {
+			"type": "string"
+		},
+		"subheading": {
+			"type": "string"
+		}
+	},
+	"example": {
+		"attributes": {
+			"heading": "What our listeners say",
+			"subheading": "Their experience throughout every platform"
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "podofcast",
+	"editorScript": "file:./index.js"
+}

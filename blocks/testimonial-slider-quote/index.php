@@ -13,16 +13,16 @@
  * Registers all block assets so that they can be enqueued through Gutenberg in
  * the corresponding context.
  */
-function podofcast_dynamic_block_block_init() {
+function podofcast_testimonial_slider_quote_block_init() {
 
 	register_block_type(
 		__DIR__,
 		array(
-			'render_callback' => 'podofcast_dynamic_block_render_callback',
+			'render_callback' => 'podofcast_testimonial_slider_quote_render_callback',
 		)
 	);
 }
-add_action( 'init', 'podofcast_dynamic_block_block_init' );
+add_action( 'init', 'podofcast_testimonial_slider_quote_block_init' );
 
 
 /**
@@ -32,7 +32,7 @@ add_action( 'init', 'podofcast_dynamic_block_block_init' );
  * @param string   $content        Rendered block output. ie. <InnerBlocks.Content />.
  * @param WP_Block $block_instance The instance of the WP_Block class that represents the block being rendered.
  */
-function podofcast_dynamic_block_render_callback( $attributes, $content, $block_instance ) {
+function podofcast_testimonial_slider_quote_render_callback( $attributes, $content, $block_instance ) {
 	ob_start();
 	/**
 	 * Keeping the markup to be returned in a separate file is sometimes better, especially if there is very complicated markup.

@@ -111,5 +111,5 @@ add_action( 'init', 'podofcast_register_block_pattern_categories' );
  * Register custom Gutenberg blocks.
  *
  */
-include get_theme_file_path() . '/blocks-built/10-dynamic-block/index.php';
-include get_theme_file_path() . '/blocks-built/quote-slider-quote/index.php';
+include get_theme_file_path() . '/blocks-built/testimonial-slider/index.php';
+include get_theme_file_path() . '/blocks-built/testimonial-slider-quote/index.php';
