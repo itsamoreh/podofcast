@@ -1,5 +1,7 @@
 /**
- * WordPress dependencies
+ * Registers a new block provided a unique name and an object defining its behavior.
+ *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 import { registerBlockType } from '@wordpress/blocks';
 
@@ -8,16 +10,22 @@ import { registerBlockType } from '@wordpress/blocks';
  */
 import json from './block.json';
 import Edit from './edit';
-import save from './save';
 
-import './editor.css';
-
-// Destructure the json file to get the name of the block
-// For more information on how this works, see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 const { name } = json;
 
-// Register the block
+/**
+ * Every block starts by registering a new block type definition.
+ *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
+ */
 registerBlockType(name, {
+	/**
+	 * @see ./edit.js
+	 */
 	edit: Edit,
-	save, // Object shorthand property - same as writing: save: save,
+
+	/**
+	 * Many examples use following for dynamic blocks: save: () => null
+	 * This is the default value in registerBlockType for the save property, so it has been omitted here.
+	 */
 });

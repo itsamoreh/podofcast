@@ -1,4 +1,4 @@
-.wp-block-podofcast-quote-slider-quote {
+.wp-block-podofcast-testimonial-slider-quote {
 	padding: 40px;
 	border-radius: 8px;
 	background-color: var(--wp--preset--color--white);
@@ -17,19 +17,22 @@
 		}
 	}
 
-	.wp-block-image {
-		display: inline;
-
-		img {
-			width: 48px;
-			height: 48px;
-			border-radius: 99px;
-		}
+	.footer {
+		display: flex;
+		align-items: center;
 	}
 
-	.citation {
+	.author-image {
 		display: inline;
-		margin-left: 10px;
+		margin-right: 10px;
+		width: 48px;
+		height: 48px;
+		border-radius: 99px;
+		background-color: var(--wp--preset--color--alice-blue);
+	}
+
+	.author-name {
+		display: inline;
 		font-size: var(--wp--preset--font-size--caption);
 		line-height: 48px;
 	}

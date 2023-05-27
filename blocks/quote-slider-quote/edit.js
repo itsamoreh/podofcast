@@ -1,28 +1,69 @@
-/**
- * WordPress dependencies
- */
+import {
+	useBlockProps,
+	RichText,
+	MediaUpload,
+	MediaUploadCheck,
+} from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
-import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 
-/**
- * Internal dependencies
- */
-const QUOTE_TEMPLATE = [
-	['core/paragraph', { placeholder: 'Quote', className: 'quote' }],
-	['core/image', {}],
-	['core/paragraph', { placeholder: 'Citation', className: 'citation' }],
-];
+export default function Edit({
+	attributes: { quote, author, image },
+	setAttributes,
+}) {
+	const onSelectImage = (media) => {
+		if (media?.url) {
+			setAttributes({
+				image: {
+					id: media.id,
+					url: media.url,
+					alt: media.alt,
+				},
+			});
+		}
+	};
 
-const Edit = () => {
-	const blockProps = useBlockProps();
 	return (
-		<div {...blockProps}>
-			{/*
-			Template lock set to "all" to prevent adding/removing blocks
-			See https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/nested-blocks-inner-blocks/#template
-			*/}
-			<InnerBlocks template={QUOTE_TEMPLATE} templateLock="all" />
+		<div {...useBlockProps()}>
+			<blockquote>
+				<RichText
+					className="quote"
+					tagName="p"
+					value={quote}
+					onChange={(newQuote) => setAttributes({ quote: newQuote })}
+					placeholder="Testimonial quote..."
+				/>
+				<div className="footer">
+					<MediaUpload
+						onSelect={onSelectImage}
+						allowedTypes={['image']}
+						value={image?.id}
+						render={({ open }) => (
+							<>
+								<MediaUploadCheck>
+									{image && (
+										<img
+											className="author-image"
+											src={image?.url}
+											alt=""
+											onClick={open}
+										/>
+									)}
+								</MediaUploadCheck>
+								{!image && <button onClick={open}>+</button>}
+							</>
+						)}
+					/>
+					<RichText
+						className="author-name"
+						tagName="cite"
+						value={author}
+						onChange={(newAuthor) =>
+							setAttributes({ author: newAuthor })
+						}
+						placeholder="Author name..."
+					/>
+				</div>
+			</blockquote>
 		</div>
 	);
-};
-export default Edit;
+}

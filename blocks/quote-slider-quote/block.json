@@ -1,12 +1,32 @@
 {
-	"$schema": "https://json.schemastore.org/block.json",
+	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
-	"name": "podofcast/quote-slider-quote",
-	"title": "Quote Slider Quote",
-	"textdomain": "podofcast",
+	"name": "podofcast/testimonial-slider-quote",
+	"version": "0.1.0",
+	"title": "Testimonial Slider Quote",
+	"category": "text",
 	"icon": "smiley",
-	"category": "layout",
-	"example": {},
-	"editorScript": "file:./index.js",
-	"editorStyle": "file:./index.css"
+	"attributes": {
+		"quote": {
+			"type": "string"
+		},
+		"image": {
+			"type": "object",
+			"default": {}
+		},
+		"author": {
+			"type": "string"
+		}
+	},
+	"example": {
+		"attributes": {
+			"quote": "Voluptate occaecat culpa cillum aute est. Magna aliquip occaecat enim do ad ea consectetur voluptate quis eiusmod. Eu veniam eiusmod nostrud sunt consequat eiusmod est laborum proident et occaecat id anim proident veniam. Aute deserunt qui excepteur occaecat eiusmod ullamco officia do velit minim consequat eu veniam. Do proident voluptate fugiat aliquip eu velit eu voluptate aute occaecat eiusmod ut irure eiusmod Lorem. Eu sint mollit consequat qui deserunt. Ullamco qui sunt aliquip eu minim laboris.",
+			"author": "John Doe"
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "podofcast",
+	"editorScript": "file:./index.js"
 }

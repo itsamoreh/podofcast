@@ -110,12 +110,6 @@ add_action( 'init', 'podofcast_register_block_pattern_categories' );
 /**
  * Register custom Gutenberg blocks.
  *
- * Registers each block in the blocks-built folder.
- *
  */
-function podofcast_register_custom_blocks() {
-	foreach ( glob( get_template_directory() . '/blocks-built/*/block.json') as $block ) {
-		register_block_type( $block );
-	}
-}
-add_action( 'init', 'podofcast_register_custom_blocks' );
+include get_theme_file_path() . '/blocks-built/10-dynamic-block/index.php';
+include get_theme_file_path() . '/blocks-built/quote-slider-quote/index.php';
