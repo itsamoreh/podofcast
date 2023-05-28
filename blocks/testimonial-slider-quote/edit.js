@@ -23,47 +23,45 @@ export default function Edit({
 	};
 
 	return (
-		<div {...useBlockProps()}>
-			<blockquote>
-				<RichText
-					className="quote"
-					tagName="p"
-					value={quote}
-					onChange={(newQuote) => setAttributes({ quote: newQuote })}
-					placeholder="Testimonial quote..."
+		<blockquote {...useBlockProps()}>
+			<RichText
+				className="quote"
+				tagName="p"
+				value={quote}
+				onChange={(newQuote) => setAttributes({ quote: newQuote })}
+				placeholder="Testimonial quote..."
+			/>
+			<div className="footer">
+				<MediaUpload
+					onSelect={onSelectImage}
+					allowedTypes={['image']}
+					value={image?.id}
+					render={({ open }) => (
+						<>
+							<MediaUploadCheck>
+								{image && (
+									<img
+										className="author-image"
+										src={image?.url}
+										alt=""
+										onClick={open}
+									/>
+								)}
+							</MediaUploadCheck>
+							{!image && <button onClick={open}>+</button>}
+						</>
+					)}
 				/>
-				<div className="footer">
-					<MediaUpload
-						onSelect={onSelectImage}
-						allowedTypes={['image']}
-						value={image?.id}
-						render={({ open }) => (
-							<>
-								<MediaUploadCheck>
-									{image && (
-										<img
-											className="author-image"
-											src={image?.url}
-											alt=""
-											onClick={open}
-										/>
-									)}
-								</MediaUploadCheck>
-								{!image && <button onClick={open}>+</button>}
-							</>
-						)}
-					/>
-					<RichText
-						className="author-name"
-						tagName="cite"
-						value={author}
-						onChange={(newAuthor) =>
-							setAttributes({ author: newAuthor })
-						}
-						placeholder="Author name..."
-					/>
-				</div>
-			</blockquote>
-		</div>
+				<RichText
+					className="author-name"
+					tagName="cite"
+					value={author}
+					onChange={(newAuthor) =>
+						setAttributes({ author: newAuthor })
+					}
+					placeholder="Author name..."
+				/>
+			</div>
+		</blockquote>
 	);
 }
