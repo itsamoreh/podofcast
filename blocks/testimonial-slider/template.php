@@ -24,15 +24,16 @@ $testimonial_slides = $content;
 	<div class="testimonial-slider" x-data="
 		{
 			position: 0,
+			slideWidth: 590,
 			scrollSlider(move) {
-				if (!this.shouldScrollSlider(move)) {
+				if (!this.canScrollSlider(move)) {
 					return;
 				}
 
 				this.position = this.position + move;
 				$refs.sliderTrack.style.transform = `translateX(${this.position}px`
 			},
-			shouldScrollSlider(move) {
+			canScrollSlider(move) {
 				const sliderTrackWidth = $refs.sliderTrack.offsetWidth;
 				const newPosition = this.position + move;
 
@@ -40,11 +41,17 @@ $testimonial_slides = $content;
 			}
 		}
 	">
-		<div class="testimonial-slider-track" x-ref="sliderTrack">
-			<?php echo do_blocks($testimonial_slides) ?>
+		<div class="testimonial-slider-rail">
+			<div class="testimonial-slider-train" x-ref="sliderTrack">
+				<?php echo do_blocks($testimonial_slides) ?>
+			</div>
 		</div>
 		<div class="testimonial-slider-controls">
-			<button class="testimonial-slider-prev" @click="scrollSlider(590)">
+			<button
+				class="testimonial-slider-prev disabled"
+				:class="{ 'disabled': !canScrollSlider(slideWidth) }"
+				@click="scrollSlider(slideWidth)"
+			>
 				<svg
 					width="48"
 					height="48"
@@ -70,7 +77,11 @@ $testimonial_slides = $content;
 					/>
 				</svg>
 			</button>
-			<button class="testimonial-slider-next" @click="scrollSlider(-590)">
+			<button
+				class="testimonial-slider-next"
+				:class="{ 'disabled': !canScrollSlider(slideWidth * -1) }"
+				@click="scrollSlider(slideWidth * -1)"
+			>
 				<svg
 					width="48"
 					height="48"

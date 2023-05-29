@@ -40,7 +40,17 @@ export default function Edit({
 				placeholder="Subheading..."
 			/>
 			<div className="testimonial-slider">
-				<div className="testimonial-slider-track">{children}</div>
+				<div
+					className="testimonial-slider-rail"
+					style={{ overflow: 'scroll', position: 'relative' }}
+				>
+					<div
+						className="testimonial-slider-train"
+						style={{ position: 'relative' }}
+					>
+						{children}
+					</div>
+				</div>
 				<div className="testimonial-slider-controls">
 					<button className="testimonial-slider-prev">
 						<svg

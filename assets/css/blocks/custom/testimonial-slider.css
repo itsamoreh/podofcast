@@ -40,8 +40,11 @@
 		width: 100%;
 		max-width: var(--wp--style--global--content-size);
 
-		&-track {
+		&-rail {
 			position: relative;
+		}
+
+		&-train {
 			width: fit-content;
 			display: flex;
 			gap: 20px;
@@ -60,6 +63,10 @@
 				border: none;
 
 				cursor: pointer;
+
+				&.disabled {
+					opacity: 0.25;
+				}
 
 				+ button {
 					margin-left: 20px;
