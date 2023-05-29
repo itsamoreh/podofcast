@@ -21,12 +21,31 @@ $testimonial_slides = $content;
 	<p class="subheading">
 		<?php echo $subheading ?>
 	</p>
-	<div class="testimonial-slider">
-		<div class="testimonial-slider-track">
+	<div class="testimonial-slider" x-data="
+		{
+			position: 0,
+			scrollSlider(move) {
+				if (!this.shouldScrollSlider(move)) {
+					console.log('should not scroll');
+					return;
+				}
+
+				this.position = this.position + move;
+				$refs.sliderTrack.style.transform = `translateX(${this.position}px`
+			},
+			shouldScrollSlider(move) {
+				const sliderTrackWidth = $refs.sliderTrack.offsetWidth;
+				const newPosition = this.position + move;
+
+				return newPosition <= 0 && sliderTrackWidth * -1 <= newPosition;
+			}
+		}
+	">
+		<div class="testimonial-slider-track" x-ref="sliderTrack">
 			<?php echo do_blocks($testimonial_slides) ?>
 		</div>
 		<div class="testimonial-slider-controls">
-			<button class="testimonial-slider-prev">
+			<button class="testimonial-slider-prev" @click="scrollSlider(590)">
 				<svg
 					width="48"
 					height="48"
@@ -52,7 +71,7 @@ $testimonial_slides = $content;
 					/>
 				</svg>
 			</button>
-			<button class="testimonial-slider-next">
+			<button class="testimonial-slider-next" @click="scrollSlider(-590)">
 				<svg
 					width="48"
 					height="48"

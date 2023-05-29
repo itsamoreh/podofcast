@@ -54,6 +54,19 @@ function podofcast_enqueue_style_sheet() {
 add_action( 'wp_enqueue_scripts', 'podofcast_enqueue_style_sheet' );
 
 /**
+ * Enqueue theme scripts.
+ *
+ * @since 0.1.0
+ */
+function podofcast_enqueue_script() {
+
+	wp_enqueue_script( 'alpinejs', 'https://cdn.jsdelivr.net/npm/alpinejs@3.12.1/dist/cdn.min.js', array(), null, false );
+    wp_script_add_data( 'alpinejs', 'defer', true );
+
+}
+add_action( 'wp_enqueue_scripts', 'podofcast_enqueue_script' );
+
+/**
  * Register block styles.
  *
  * @since 0.1.0

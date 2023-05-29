@@ -37,13 +37,16 @@
 	}
 
 	.testimonial-slider {
-		width: var(--wp--style--global--content-size);
+		width: 100%;
+		max-width: var(--wp--style--global--content-size);
 
 		&-track {
 			position: relative;
 			width: fit-content;
 			display: flex;
 			gap: 20px;
+
+			transition: transform 0.5s ease-in-out;
 		}
 
 		&-controls {
