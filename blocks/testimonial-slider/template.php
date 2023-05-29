@@ -26,7 +26,6 @@ $testimonial_slides = $content;
 			position: 0,
 			scrollSlider(move) {
 				if (!this.shouldScrollSlider(move)) {
-					console.log('should not scroll');
 					return;
 				}
 
