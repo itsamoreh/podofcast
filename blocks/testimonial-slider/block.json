@@ -5,7 +5,7 @@
 	"version": "0.1.0",
 	"title": "Testimonial Slider",
 	"category": "text",
-	"icon": "smiley",
+	"icon": "slides",
 	"attributes": {
 		"align": {
 			"type": "string",

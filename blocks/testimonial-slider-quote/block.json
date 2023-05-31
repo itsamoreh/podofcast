@@ -5,7 +5,7 @@
 	"version": "0.1.0",
 	"title": "Testimonial Slider Quote",
 	"category": "text",
-	"icon": "smiley",
+	"icon": "editor-quote",
 	"attributes": {
 		"quote": {
 			"type": "string"
