@@ -9,27 +9,23 @@
  * @package gutenberg-examples
  */
 
+$quote = $attributes['quote'] ?? '';
+$image = $attributes['image']['id'] ?? '';
+$author = $attributes['author'] ?? '';
+
 ?>
 <blockquote <?php echo wp_kses_data( get_block_wrapper_attributes() ); ?>>
 	<p class="quote">
-		<?php
-		if ( isset( $attributes['quote'] ) ) {
-			echo wp_kses_post( $attributes['quote'] );
-		}
-		?>
+		<?php echo wp_kses_post( $quote ) ?>
 	</p>
 	<div class="footer">
 		<?php
-		if ( isset( $attributes['image']['id'] ) ) {
-			echo wp_get_attachment_image( $attributes['image']['id'], 'thumbnail', false, ['class' => 'author-image'] );
+		if ( $image ) {
+			echo wp_get_attachment_image( $image, 'thumbnail', false, ['class' => 'author-image'] );
 		}
 		?>
 		<cite class="author-name">
-			<?php
-			if ( isset( $attributes['author'] ) ) {
-				echo wp_kses_post( $attributes['author'] );
-			}
-			?>
+			<?php echo wp_kses_post( $author ) ?>
 		</cite>
 	</div>
 </blockquote>

@@ -8,6 +8,7 @@
  *
  * @package podofcast
  */
+
 $alignment = $attributes['align'] ?? '';
 $heading = $attributes['heading'] ?? '';
 $subheading = $attributes['subheading'] ?? '';
@@ -31,7 +32,7 @@ $testimonial_slides = $content;
 				}
 
 				this.position = this.position + move;
-				$refs.sliderTrack.style.transform = `translateX(${this.position}px`
+				$refs.sliderTrack.style.transform = `translateX(${this.position}px`;
 			},
 			canScrollSlider(move) {
 				const sliderTrackWidth = $refs.sliderTrack.offsetWidth;
