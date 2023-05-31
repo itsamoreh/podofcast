@@ -38,6 +38,6 @@ function podofcast_testimonial_slider_render_callback( $attributes, $content, $b
 	 * Keeping the markup to be returned in a separate file is sometimes better, especially if there is very complicated markup.
 	 * All of passed parameters are still accessible in the file.
 	 */
-	require __DIR__ . '/template.php';
+	require __DIR__ . '/testimonial-slider.php';
 	return ob_get_clean();
 }
