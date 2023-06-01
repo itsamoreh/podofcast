@@ -1,6 +1,5 @@
 .wp-block-podofcast-testimonial-slider {
-	padding-top: 140px;
-	padding-bottom: 105px;
+	padding: 140px 20px 105px 20px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -33,14 +32,12 @@
 		margin-top: 0;
 		margin-bottom: 100px;
 		font-size: var(--wp--preset--font-size--h-3);
-		color: var(--wp--preset--color--davys-grey);
+		opacity: 0.8;
 	}
 
 	.testimonial-slider {
 		width: 100%;
 		max-width: var(--wp--style--global--content-size);
-		padding-right: 20px;
-		padding-left: 20px;
 
 		&-rail {
 			position: relative;
@@ -82,5 +79,13 @@
 		margin: 0;
 		width: 570px;
 		flex-shrink: 0;
+		color: var(--wp--preset--color--black);
+
+		display: flex;
+		flex-direction: column;
+
+		.footer {
+			margin-top: auto;
+		}
 	}
 }

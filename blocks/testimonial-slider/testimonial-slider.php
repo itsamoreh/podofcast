@@ -9,13 +9,12 @@
  * @package podofcast
  */
 
-$alignment = $attributes['align'] ?? '';
 $heading = $attributes['heading'] ?? '';
 $subheading = $attributes['subheading'] ?? '';
 $testimonial_slides = $content;
 
 ?>
-<div <?php echo wp_kses_data( get_block_wrapper_attributes( array( 'class' => $alignment ? 'align' . $alignment : '' ) ) ); ?>>
+<div <?php echo wp_kses_data( get_block_wrapper_attributes() ); ?>>
 	<h2 class="heading">
 		<?php echo $heading ?>
 	</h2>

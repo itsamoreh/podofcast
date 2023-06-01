@@ -7,10 +7,6 @@
 	"category": "text",
 	"icon": "slides",
 	"attributes": {
-		"align": {
-			"type": "string",
-			"default": "full"
-		},
 		"heading": {
 			"type": "string"
 		},
@@ -26,6 +22,10 @@
 	},
 	"supports": {
 		"align": true,
+		"color": {
+			"background": true,
+			"text": true
+		},
 		"html": false
 	},
 	"textdomain": "podofcast",
