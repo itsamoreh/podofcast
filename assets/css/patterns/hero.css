@@ -11,7 +11,6 @@
 
 	/* The main heading. */
 	.wp-block-heading {
-		font-size: var(--wp--preset--font-size--display);
 		font-weight: 500;
 		padding: 0 !important; /* This needs important to override default padding in the site editor. */
 		max-width: 550px;
