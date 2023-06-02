@@ -21,26 +21,30 @@ $testimonial_slides = $content;
 	<p class="subheading">
 		<?php echo $subheading ?>
 	</p>
-	<div class="testimonial-slider" x-data="
-		{
-			position: 0,
-			slideWidth: 590,
-			scrollSlider(move) {
-				if (!this.canScrollSlider(move)) {
-					return;
+	<div
+		class="testimonial-slider"
+		aria-label="Testimonial slider"
+		x-data="
+			{
+				position: 0,
+				slideWidth: 590,
+				scrollSlider(move) {
+					if (!this.canScrollSlider(move)) {
+						return;
+					}
+
+					this.position = this.position + move;
+					$refs.sliderTrack.style.transform = `translateX(${this.position}px`;
+				},
+				canScrollSlider(move) {
+					const sliderTrackWidth = $refs.sliderTrack.offsetWidth;
+					const newPosition = this.position + move;
+
+					return newPosition <= 0 && sliderTrackWidth * -1 <= newPosition;
 				}
-
-				this.position = this.position + move;
-				$refs.sliderTrack.style.transform = `translateX(${this.position}px`;
-			},
-			canScrollSlider(move) {
-				const sliderTrackWidth = $refs.sliderTrack.offsetWidth;
-				const newPosition = this.position + move;
-
-				return newPosition <= 0 && sliderTrackWidth * -1 <= newPosition;
 			}
-		}
-	">
+		"
+	>
 		<div class="testimonial-slider-rail">
 			<div class="testimonial-slider-train" x-ref="sliderTrack">
 				<?php echo do_blocks($testimonial_slides) ?>
@@ -51,6 +55,7 @@ $testimonial_slides = $content;
 				class="testimonial-slider-prev disabled"
 				:class="{ 'disabled': !canScrollSlider(slideWidth) }"
 				@click="scrollSlider(slideWidth)"
+				aria-label="Scroll slider to the previous slide"
 			>
 				<svg
 					width="48"
@@ -81,6 +86,7 @@ $testimonial_slides = $content;
 				class="testimonial-slider-next"
 				:class="{ 'disabled': !canScrollSlider(slideWidth * -1) }"
 				@click="scrollSlider(slideWidth * -1)"
+				aria-label="Scroll slider to the next slide"
 			>
 				<svg
 					width="48"

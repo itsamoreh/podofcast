@@ -54,6 +54,16 @@ function podofcast_enqueue_style_sheet() {
 add_action( 'wp_enqueue_scripts', 'podofcast_enqueue_style_sheet' );
 
 /**
+ * Add meta tags.
+ *
+ * @since 0.1.0
+ */
+function podofcast_add_meta_tags() {
+	echo '<meta name="description" content="Example site for a full site editing experiment.">';
+  }
+  add_action('wp_head', 'podofcast_add_meta_tags');
+
+/**
  * Enqueue theme scripts.
  *
  * @since 0.1.0
