@@ -114,6 +114,10 @@ function podofcast_register_block_pattern_categories() {
 		array( 'label' => __( 'Heros', 'podofcast' ) )
 	);
 	register_block_pattern_category(
+		'quotes',
+		array( 'label' => __( 'Quotes', 'podofcast' ) )
+	);
+	register_block_pattern_category(
 		'other',
 		array( 'label' => __( 'Other', 'podofcast' ) )
 	);

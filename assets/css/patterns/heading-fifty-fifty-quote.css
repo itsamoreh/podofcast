@@ -1,0 +1,56 @@
+.podofcast-pattern-test {
+	padding-top: 140px;
+	padding-bottom: 140px;
+
+	.wp-block-heading {
+		margin: auto;
+		padding: 0;
+		max-width: 765px;
+		margin-bottom: 100px;
+	}
+
+	.wp-block-columns {
+		width: 100%;
+
+		.wp-block-column {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	.wp-block-image + p {
+		max-width: 572px;
+		padding: 0;
+	}
+
+	.wp-block-podofcast-testimonial-slider-quote {
+		margin: 120px auto 0 auto;
+		width: 100%;
+		max-width: var(--wp--style--global--content-size);
+		background-color: var(--wp--preset--color--champagne);
+
+		.quote {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			text-align: center;
+			font-size: var(--wp--preset--font-size--h-2);
+			line-height: 140%;
+			font-weight: 700;
+
+			&::before {
+				top: -70px;
+			}
+		}
+
+		.footer {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}
