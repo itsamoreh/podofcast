@@ -1,4 +1,4 @@
-# Pod Of Cast Example Theme
+# Pod Of Cast demo WordPress block theme
 
 ## What is this?
 
