@@ -2,7 +2,7 @@
 
 ## What is this?
 
-This is an experiment to see if I can build a full site editing theme from a figma mockup.
+This is a demo block theme built from [a free figma mockup](https://www.figma.com/community/file/1093368153627239554) from the figma community site.
 
 ## Local Environment
 
