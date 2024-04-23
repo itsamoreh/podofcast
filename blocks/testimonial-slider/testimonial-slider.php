@@ -34,19 +34,19 @@ $testimonial_slides = $content;
 					}
 
 					this.position = this.position + move;
-					$refs.sliderTrack.style.transform = `translateX(${this.position}px`;
+					$refs.sliderTrain.style.transform = `translateX(${this.position}px`;
 				},
 				canScrollSlider(move) {
-					const sliderTrackWidth = $refs.sliderTrack.offsetWidth;
+					const sliderTrainWidth = $refs.sliderTrain.offsetWidth;
 					const newPosition = this.position + move;
 
-					return newPosition <= 0 && sliderTrackWidth * -1 <= newPosition;
+					return newPosition <= 0 && sliderTrainWidth * -1 <= newPosition;
 				}
 			}
 		"
 	>
 		<div class="testimonial-slider-rail">
-			<div class="testimonial-slider-train" x-ref="sliderTrack">
+			<div class="testimonial-slider-train" x-ref="sliderTrain">
 				<?php echo do_blocks($testimonial_slides) ?>
 			</div>
 		</div>

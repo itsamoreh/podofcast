@@ -71,7 +71,7 @@ function podofcast_add_meta_tags() {
 function podofcast_enqueue_script() {
 
 	wp_enqueue_script( 'alpinejs', 'https://cdn.jsdelivr.net/npm/alpinejs@3.12.1/dist/cdn.min.js', array(), null, false );
-    wp_script_add_data( 'alpinejs', 'defer', true );
+	wp_script_add_data( 'alpinejs', 'defer', true );
 
 }
 add_action( 'wp_enqueue_scripts', 'podofcast_enqueue_script' );
