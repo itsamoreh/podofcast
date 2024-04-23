@@ -10,7 +10,7 @@
 		"watch:css": "npm run clean:css && npm run build:css -- --watch"
 	},
 	"devDependencies": {
-		"@wordpress/env": "^7.0.0",
+		"@wordpress/env": "^9.8.0",
 		"@wordpress/prettier-config": "^2.16.0",
 		"@wordpress/scripts": "^26.4.0",
 		"postcss-cli": "^10.1.0",
